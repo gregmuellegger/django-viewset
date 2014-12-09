@@ -1,0 +1,4 @@
+argparse
+coverage
+django-discover-runner
+tox >= 1.8
