@@ -3,6 +3,7 @@ include CHANGES.rst
 recursive-include django_viewset/templates *.html
 recursive-include tests *.py *.html
 recursive-include requirements *.txt
+recursive-include tests *.py *.html
 #recursive-include docs *.rst *.png
 #include docs/Makefile docs/make.bat docs/conf.py
 #prune docs/_build
