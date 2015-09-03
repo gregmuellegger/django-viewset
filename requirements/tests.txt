@@ -1,4 +1,5 @@
 pytest
+pytest-describe
 pytest-django
 django-discover-runner
 tox >= 1.8
