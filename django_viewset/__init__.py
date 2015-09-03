@@ -4,4 +4,4 @@ from .viewset import ViewSet, ModelViewSet
 from .views import NamedView, URLView
 
 
-__version__ = '0.1.0'
+__version__ = '0.1.1'
