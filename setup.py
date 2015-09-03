@@ -25,7 +25,7 @@ setup(
     version=find_version('django_viewset', '__init__.py'),
     author=u'Gregor Müllegger',
     author_email='gregor@muellegger.de',
-    packages=find_packages('django_viewset/*'),
+    packages=find_packages(exclude=['tests.*', 'tests']),
     include_package_data=True,
     url='https://github.com/gregmuellegger/django-viewset',
     license='BSD licence, see LICENSE file',
