@@ -1,6 +1,7 @@
 #!/usr/bin/env python
-import argparse
-import os, sys
+import pytest
+import os
+import sys
 
 
 os.environ['DJANGO_SETTINGS_MODULE'] = 'tests.settings'
@@ -15,30 +16,7 @@ def runtests(*argv):
     argv = list(argv) or [
         'tests',
     ]
-    opts = argparser.parse_args(argv)
-
-    if opts.coverage:
-        from coverage import coverage
-        test_coverage = coverage(
-            branch=True,
-            source=['django_viewset'])
-        test_coverage.start()
-
-    # Run tests.
-    from django.core.management import execute_from_command_line
-    execute_from_command_line([sys.argv[0], 'test'] + opts.test)
-
-    if opts.coverage:
-        test_coverage.stop()
-
-        # Report coverage to commandline.
-        test_coverage.report(file=sys.stdout)
-
-
-argparser = argparse.ArgumentParser(description='Run the tests.')
-argparser.add_argument('test', nargs='*')
-argparser.add_argument('--no-coverage', dest='coverage', action='store_const',
-    const=False, default=True, help='Do not collect coverage data.')
+    pytest.main(argv)
 
 
 if __name__ == '__main__':

@@ -1,4 +1,4 @@
-argparse
-coverage
+pytest
+pytest-django
 django-discover-runner
 tox >= 1.8
