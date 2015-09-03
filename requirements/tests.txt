@@ -1,5 +1,5 @@
 pytest
 pytest-describe
-pytest-django
+pytest-xdist
 django-discover-runner
 tox >= 1.8
