@@ -1,3 +1,5 @@
 *.pyc
+/.cache/
 /dist/
+/django_viewset.egg-info/
 /.tox/
