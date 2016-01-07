@@ -1,6 +1,7 @@
 from django.conf.urls import url
-from django.utils.datastructures import SortedDict
 from django.utils.six import with_metaclass
+
+from .compat import OrderedDict
 from .views import NamedView, URLView
 
 
@@ -18,7 +19,7 @@ class ViewSetMetaClass(type):
         # Make a copy of that list. Otherwise we have the same instance on the
         # parent and child class. This would result in views beeing added to
         # the parent which should only be defined on the children.
-        new_class.views = getattr(new_class, 'views', SortedDict()).copy()
+        new_class.views = getattr(new_class, 'views', OrderedDict()).copy()
 
         views = [
             (attribute, value)
