@@ -29,7 +29,7 @@ setup(
     include_package_data=True,
     url='https://github.com/gregmuellegger/django-viewset',
     license='BSD licence, see LICENSE file',
-    description='A replacement of django.contrib.admin',
+    description='The most simplistic way to group Django views.',
     long_description=u'\n\n'.join((
         read('README.rst'),
         read('CHANGES.rst'))),
