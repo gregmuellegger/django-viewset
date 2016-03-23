@@ -10,7 +10,7 @@ over it:
 
 - You get the benefit of readability as you see at a glance what views of your
   app belong together and should be put into a ``urls.py`` together.
-- Having a class to group views together brings makes it possible to easily
+- Having a class to group views together makes it possible to easily
   combine multiple viewsets, override only parts of a viewset and all other
   things you can do with a class.
 
