@@ -20,8 +20,8 @@ Here is an example:
 
     # In your viewsets.py file.
 
-    from django_viewset URLView
-    from django_viewset ViewSet
+    from django_viewset import URLView
+    from django_viewset import ViewSet
     from django.contrib.auth.models import User
     from django.views.generic import DetailView, CreateView, UpdateView, DeleteView
 
